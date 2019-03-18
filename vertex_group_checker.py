@@ -4,7 +4,7 @@ import bmesh
 bl_info = {
   "name": "Vertex Group Checker",
   "author": "iruca3",
-  "version": (0, 7),
+  "version": (0, 8),
   "blender": (2, 78),
   "location": "",
   "description": "Making easy checking used vertex group",
@@ -28,6 +28,8 @@ class UI(bpy.types.Panel):
     obj = bpy.context.active_object
     obj.update_from_editmode()
     vertex_groups = obj.vertex_groups
+    if not hasattr(obj.data, "vertices"):
+      return []
     for vert in obj.data.vertices:
       if vert.select:
         for vg in vert.groups:
