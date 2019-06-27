@@ -9,8 +9,8 @@ bl_info = {
   "location": "",
   "description": "Making easy checking used vertex group",
   "warning": "",
-  "wiki_url": "",
-  "tracker_url": "",
+  "wiki_url": "https://github.com/iruca3/vertex_group_checker",
+  "tracker_url": "https://twitter.com/aqua_h4ck3r5",
   "category": "Rigging"
 }
 
