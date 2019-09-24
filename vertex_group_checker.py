@@ -4,8 +4,8 @@ import bmesh
 bl_info = {
   "name": "Vertex Group Checker",
   "author": "iruca3",
-  "version": (0, 9),
-  "blender": (2, 78),
+  "version": (0, 9, 1),
+  "blender": (2, 80, 0),
   "location": "",
   "description": "Making easy checking used vertex group",
   "warning": "",
@@ -22,6 +22,7 @@ bl_info = {
 class UI(bpy.types.Panel):
   bl_label = "Vertex Group Checker"
   bl_space_type = "VIEW_3D"
+  bl_category = "Item"
   bl_region_type = "UI"
 
   def is_editing_object(self):
@@ -57,10 +58,10 @@ class UI(bpy.types.Panel):
       remove_button.target_weight_name = name
       follow_button = row.operator("vgc.follow_button")
       follow_button.target_weight_name = name
-      row.label(name, icon = "GROUP_VERTEX")
+      row.label(text = name, icon = "GROUP_VERTEX")
       
     if len(weight_names) == 0:
-      self.layout.label("No weight found.", icon = "INFO")
+      self.layout.label(text = "No weight found.")
 
   @classmethod
   def poll(self, context):
