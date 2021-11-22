@@ -4,8 +4,8 @@ import bmesh
 bl_info = {
   "name": "Vertex Group Checker",
   "author": "iruca3",
-  "version": (0, 9, 1),
-  "blender": (2, 80, 0),
+  "version": (0, 9, 2),
+  "blender": (2, 90, 0),
   "location": "",
   "description": "Making easy checking used vertex group",
   "warning": "",
