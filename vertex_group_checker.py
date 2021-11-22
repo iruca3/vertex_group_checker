@@ -70,7 +70,7 @@ class UI(bpy.types.Panel):
 class RemoveWeightButton(bpy.types.Operator):
   bl_idname = "vgc.remove_weight_button"
   bl_label = "Remove"
-  target_weight_name = bpy.props.StringProperty()
+  target_weight_name: bpy.props.StringProperty()
 
   def execute(self, context):
     obj = bpy.context.active_object
@@ -88,7 +88,7 @@ class RemoveWeightButton(bpy.types.Operator):
 class FollowButton(bpy.types.Operator):
   bl_idname = "vgc.follow_button"
   bl_label = "Select"
-  target_weight_name = bpy.props.StringProperty()
+  target_weight_name: bpy.props.StringProperty()
 
   def execute(self, context):
     obj = bpy.context.active_object
